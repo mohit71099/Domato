@@ -1,0 +1,39 @@
+{
+  "name": "domato",
+  "version": "1.0.0",
+  "description": "Food_Ordering_App",
+  "keywords": [
+    "Making",
+    "app",
+    "from",
+    "Scratch"
+  ],
+  "homepage": "https://github.com/mohit71099/Domato#readme",
+  "bugs": {
+    "url": "https://github.com/mohit71099/Domato/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohit71099/Domato.git"
+  },
+  "license": "ISC",
+  "author": "Mohit Kumar Gupta",
+  "type": "commonjs",
+  
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserlist": [
+    "last 2 version"
+  ]
+}
