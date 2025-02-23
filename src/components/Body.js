@@ -1,10 +1,24 @@
 import Rescard from "./Rescard.js";
-import  { useState } from "react";
+import  { useState, useEffect } from "react";
 import resList from "../utils/mockdata.js";
 
 
 const Body = ()=>{
   const  [resturantList,setresturantList] = useState(resList);
+
+  useEffect(()=>{
+    console.log("UseEffect is called ");
+    fetchData();
+  },[]);
+  
+  const fetchData = async ()=>{
+    const data =  await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.8045665&lng=86.2028754&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+       );
+    const json  =  await data.json();
+    console.log(json);
+    console.log(json.data.cards)
+  }
     return(
         <div className="body">
            
@@ -30,4 +44,4 @@ const Body = ()=>{
     );
 };
 
-export default Body;
+export default Body; 
