@@ -14,9 +14,9 @@ const Header = ()=>{
                 <li>Menu</li>
                 <li>Cart</li>
             </ul>
-            </div>
+            </div> 
         </div>
     );
 }
 
-export default Header;
+export default Header; 
