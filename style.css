@@ -34,6 +34,7 @@
     background-color: #f0f0f0;
     margin-left: 5px;
     padding: 5px;
+    align-items: auto;
 }
 .res-card:hover{
     border:   1px solid black;
@@ -45,7 +46,7 @@
       
 }
 .filter-btn{
-    margin: 10px;
+    margin-left: 20px;
     cursor: pointer;
 }
 .shimmer-container{
@@ -58,4 +59,18 @@
     height: 400px;
     background-color: #f0f0f0;
     
+}
+.login-btn{
+    height: 30px;
+    width: 60px;
+    margin-bottom: 0 0 5px 0;
+}
+.filter{
+    display: flex;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+.search-btn{
+    margin-left: 2px;
+    cursor: pointer;
 }
