@@ -30,3 +30,13 @@ Food Ordering App
 Normal JS ultilty function
 -useState()- Superpoweful state variables react variables
 -useEffect()
+
+
+
+# 2 Types of Routing in Web Apps 
+
+ - Client side routing 
+ - Server side routing 
+ 
+
+ 
