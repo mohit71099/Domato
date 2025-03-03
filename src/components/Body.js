@@ -1,7 +1,9 @@
 import Rescard from "./Rescard.js";
 import  { useState, useEffect } from "react";
 //import resList from "../utils/mockdata.js";
+import { Link } from "react-router";
 import Shimmer  from "./Shimmer.js";
+import useOnlineStatus from "../utils/useOnlinestatus.js";
 
 
 const Body = ()=>{
@@ -28,6 +30,9 @@ const Body = ()=>{
     setfilterresturantList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
+
+   const onlineStatus = useOnlineStatus();
+   if(onlineStatus === false) return <h1> Looks like you are offline !! Please check your Internet connection </h1>
 
   //conditional rendering 
   if(resturantList.length === 0){ 
@@ -63,7 +68,7 @@ const Body = ()=>{
             </div>
             <div className="res-container">
                  {filterresturantList.map((res)=>{
-                  return <Rescard key={res.info.id} resData={res}/>
+                    return (<Link key=   {res.info.id} to={"/restaurants/"+res.info.id}> <Rescard resData={res}/> </Link>);
                 })
                 }
                 
